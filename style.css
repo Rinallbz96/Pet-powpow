@@ -1,0 +1,508 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    text-decoration: none;
+    transition: 0.3s;
+}
+*::selection{
+    background-color: #fd03a8;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+.contanier{
+    width: 85%;
+    margin: auto;
+}
+.btn{
+    padding: 15px 30px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #fd03a8;
+    border-radius: 10px;
+    border: 1px solid #aedfff;
+}
+.btn:hover{
+    color: #fd03a8;
+    background: #fff;
+}
+
+section{
+    padding: 90px 0 40px;
+}
+
+.sec-top{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.sec-top h1{
+    color: #1c1e22;
+    font-size: 40px;
+}
+.sec-top h1 span{
+    color: #fd03a8;
+}
+
+.boxs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.boxs .box{
+    width: 30%;
+}
+
+
+
+/* ---- HEADER ---- */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    z-index: 1000;
+}
+header.active{
+    background-color: #e6049a;
+    border-bottom: 2px solid #8888884a;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+header nav .nav-links a{
+    color: #fff;
+    font-weight: bold;
+    margin-left: 50px;
+}
+header nav .nav-links a:hover,
+header nav .nav-links a.active{
+    color: #0186df;
+}
+
+#btn-menu{
+    display: none;
+}
+
+
+
+/* ---- UTAMA ---- */
+
+.utama{
+    padding-top: 80px;
+    background: url(img/bg2.jpg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.utama .contanier{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.utama .content h4{
+    color: #fff;
+    font-size: 30px;
+}
+.utama .content h1{
+    font-family: 'Paytone One', sans-serif;
+    color: #fd03a8;
+    font-size: 60px;
+    margin: 5px 0px 5px 0px;
+}
+.utama .content p{
+    color: rgb(255, 248, 248);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 70px;
+}
+.utama .content .btn{
+    font-size: 18px;
+}
+.utama .utama-img img{
+    width: 650px;
+}
+
+
+
+ /* ---- TENTANG ---- */ 
+
+ .about {
+    padding: 90px 0 50px;
+    background-color: #79b4f7;
+ }
+.about .contanier{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.about .about-img img{
+    width: 300px;
+    border-radius: 10px;
+}
+.about .content{
+    margin-left: 30px;
+}
+.about .content h1{
+    color: #fd03a8;
+    font-size: 45px;
+    font-family: 'Paytone One', sans-serif;
+}
+.about .content p{
+    color: #1c1e22;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+.about .content p{
+    color: #444;
+    line-height: 1.8;
+    margin-bottom:70px;
+}
+
+
+
+/* ---- LAYANAN ---- */
+
+.services{
+    background-color: #eaf4ff;
+    text-align: center;
+}
+.services .boxs .box{
+    background-color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px 0px rgba(128, 112, 22, 0.2);
+    position: relative;
+    top: 0;
+}
+.services .boxs .box:hover{
+    top: -25px;
+}
+.services .boxs .box .layan img{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+.services .boxs .box h3{
+    color: #1c1e22;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.services .boxs .box p{
+    color: #444;
+    margin-bottom: 50px;
+}
+
+
+
+/* ---- TESOTIMONI ---- */
+
+.testimonial{
+    background-color: #d2e7ff;
+}
+.testimonial .boxs .box{
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+.testimonial .boxs .box img{
+    width: 100%;
+    height: 100%;
+}
+.testimonial .boxs .box:hover img{
+    transform: scale(1.2);
+    rotate: -4deg;
+    transition: 0.6s ease-out;
+}
+.testimonial .boxs .box .box-hover{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111b9;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.6s;
+    opacity: 0;
+}
+.testimonial .boxs .box:hover .box-hover{
+    opacity: 1;
+}
+.testimonial .boxs .box .box-hover span{
+    color: #fff;
+    font-size: 25px;
+}
+
+
+
+/* ---- BIODATA ---- */
+
+.biodiri{
+    text-align: center;
+    padding-top: 80px;
+    background: url(img/bg3\ .jpg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.biodiri .boxs .box{
+    background-color: #f3f9fd;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 20px 10px 20px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+    top: 0;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.biodiri .boxs .box:hover{
+    top: -25px;
+}
+
+.biodiri .boxs .box h3{
+    color: #1c1e22;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.biodiri .boxs .box h4{
+    color: #1c1e22;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.biodiri .boxs .box p{
+    color: #444;
+    margin-bottom: 50px;
+}
+.biodiri .boxs .box .biogambar img
+{
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    border: 5px solid #0186df;
+    margin-bottom: 10px;
+}
+.biodiri .boxs .box .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+
+
+/* ---- KONTAK ----*/
+
+.contact{
+    background: #d2e7ff;
+}
+.contact form{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact form input{
+    width: 48%;
+    font-size: 18px;
+    padding: 15px 10px;
+    outline: none;
+    border: 1px solid rgba(128, 112, 22, 0.3);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.contact form textarea{
+    border: 1px solid rgba(128, 112, 22, 0.3);
+    outline: none;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+}
+.contact form textarea:focus,
+.contact form input:focus{
+    border-color: #fd03a8;
+}
+.contact form button{
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+
+
+/* ---- FOOTER ---- */
+
+footer{
+    background: #fd03a8;
+    padding: 15px 23px;
+    color: #e0f3ff;
+    text-align: center;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+/* ---- RESPONSIVE -----*/
+
+@media(max-width:1200px){
+    .contanier{
+        width: 90%;
+    }
+    .utama .content h1{
+        font-size: 50px;
+    }
+    .utama .content p{
+        font-size: 25px;
+    }
+    .utama .utama-img img{
+        width: 380px;
+    }
+    .utama{
+        padding-bottom: 40px;
+    }
+    .about .content h3{
+        font-size: 20px;
+    }
+    .about .content p{
+        margin-bottom: 50px;
+    }
+    .about .about-img img{
+        width: 380px;
+    }
+    .services .boxs .box h3{
+        font-size: 22px;
+    }
+    .contact form{
+        width: 70%;
+    }
+
+}
+@media(max-width:900px){
+    .utama .content h1{
+        font-size: 40px;
+    }
+    .utama .content p{
+        font-size: 22px;
+    }
+    .utama .utama-img img{
+        width: 340px;
+    }
+    header nav .nav-links a{
+        margin-left: 40px;
+    }
+    .about .contanier{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about .about-img img{
+        width: 340px;
+    }
+    .about .about-img {
+        margin-bottom: 40px;
+    }
+    .boxs .box{
+        width: 45%;
+        margin-bottom: 40px;
+    }
+    .contact form{
+        width: 80%;
+    }
+}
+@media(max-width:780px){
+    .utama .contanier{
+        flex-direction: column-reverse;
+    }
+    .utama .utama-img img{
+        width: 380px;
+    }
+    .utama .content h1{
+        font-size: 50px;
+    }
+    .utama .content{
+        margin-top: 40px;
+        text-align: center;
+    }
+    .btn{
+        padding: 12px 25px;
+    }
+    #btn-menu{
+        display: block;
+        color: #fff;
+        font-size: 40px;
+
+    }
+    header nav .nav-links{
+        position: absolute;
+        top: -350px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: #1a7ec0;
+    }
+    header nav .nav-links.active{
+        top: 100%;
+    }
+    header nav .nav-links a{
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+        border-bottom: 1px solid #444;
+    }
+    header nav .nav-links a.active,
+    header nav .nav-links a:hover{
+        background-color: #fd03a8;
+        color: #053164;
+    }
+}
+@media(max-width:670px){
+    .utama .content h1{
+        font-size: 40px;
+    }
+    .utama .utama-img img{
+        width: 420px;
+    }
+    .boxs{
+        justify-content: center;
+
+    }
+    .boxs .box{
+        width: 70%;
+    }
+    .contact form{
+        width: 90%;
+    }
+}
+@media(max-width:500px){
+    .utama .utama-img img{
+        width: 380px;
+    }
+    .contact form{
+        width: 90%;
+        justify-content: center;
+
+    }
+    .contact form input{
+        width: 100%;
+    }
+}
